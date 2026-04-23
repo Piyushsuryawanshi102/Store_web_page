@@ -1,0 +1,223 @@
+/* =============================================
+   Namkeen Section Styles
+   ============================================= */
+
+.namkeen-section {
+  padding: var(--space-3xl) 0 6rem 0;
+  background: #fdfdfd;
+  text-align: center;
+  overflow: hidden; /* Prevent horizontal scroll from 3D transform */
+}
+
+/* ── Header ── */
+.namkeen__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  background: #f0f0f0;
+  border-radius: var(--radius-full);
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.namkeen__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.namkeen__desc {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* ── Buttons ── */
+.namkeen__cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.namkeen__btn-dark {
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
+}
+
+.namkeen__btn-dark:hover {
+  background: #333;
+  border-color: #333;
+  transform: translateY(-2px);
+}
+
+.namkeen__btn-light {
+  background: #fff;
+  color: #111;
+  border: 2px solid #e0e0e0;
+}
+
+.namkeen__btn-light:hover {
+  border-color: #111;
+  background: #fff;
+  color: #111;
+}
+
+/* ── 3D Gallery ── */
+.namkeen__gallery-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0 4rem;
+}
+
+.namkeen__gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.namkeen__card {
+  position: relative;
+  width: 220px;
+  height: 360px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: center center;
+  /* Margin so they overlap slightly */
+  margin: 0 -25px;
+}
+
+.namkeen__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+}
+
+.namkeen__card-brand {
+  position: absolute;
+  top: 1.5rem;
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: rgba(255,255,255,0.8);
+  z-index: 3;
+}
+
+.namkeen__card-img-container {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.namkeen__card-img {
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.namkeen__card:hover .namkeen__card-img {
+  transform: scale(1.15) translateY(-10px);
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4));
+}
+
+.namkeen__card-name {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.namkeen__card-type {
+  position: absolute;
+  bottom: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+
+/* Card 3D Transforms based on position */
+.namkeen__card:nth-child(1) { transform: rotateY(35deg) scale(0.8)  translateX(40px); z-index: 1; opacity: 0.6; }
+.namkeen__card:nth-child(2) { transform: rotateY(25deg) scale(0.85) translateX(20px); z-index: 2; opacity: 0.8; }
+.namkeen__card:nth-child(3) { transform: rotateY(15deg) scale(0.9)  translateX(10px); z-index: 3; opacity: 0.9; }
+.namkeen__card:nth-child(4) { transform: rotateY(0deg)  scale(1)    translateZ(30px); z-index: 4; opacity: 1; box-shadow: 0 20px 50px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.3); }
+.namkeen__card:nth-child(5) { transform: rotateY(-15deg) scale(0.9) translateX(-10px); z-index: 3; opacity: 0.9; }
+.namkeen__card:nth-child(6) { transform: rotateY(-25deg) scale(0.85) translateX(-20px); z-index: 2; opacity: 0.8; }
+.namkeen__card:nth-child(7) { transform: rotateY(-35deg) scale(0.8)  translateX(-40px); z-index: 1; opacity: 0.6; }
+
+/* Interactive Hover State */
+.namkeen__card:hover {
+  transform: rotateY(0deg) scale(1.05) translateZ(50px) !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .namkeen__card { width: 180px; height: 300px; margin: 0 -30px; }
+  .namkeen__card-name { font-size: 1.4rem; }
+  .namkeen__card-img-container { height: 120px; }
+}
+
+@media (max-width: 768px) {
+  .namkeen__gallery { perspective: 800px; }
+  .namkeen__card { width: 140px; height: 240px; margin: 0 -35px; }
+  .namkeen__card-name { font-size: 1.1rem; }
+  .namkeen__card-img-container { height: 100px; }
+  .namkeen__card-brand, .namkeen__card-type { display: none; }
+}
+
+@media (max-width: 480px) {
+  .namkeen__gallery { flex-wrap: wrap; transform-style: flat; perspective: none; gap: 1rem; margin: 0; }
+  .namkeen__card { width: calc(50% - 0.5rem); margin: 0; transform: none !important; height: 220px; opacity: 1 !important; }
+  .namkeen__card-img-container { height: 90px; }
+}

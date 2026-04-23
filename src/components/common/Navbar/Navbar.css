@@ -1,0 +1,180 @@
+/* =============================================
+   Navbar Styles — VRINDAVAN SWEETS SHOP
+   ============================================= */
+
+.navbar {
+  position: fixed;
+  top: calc(var(--announce-bar-height) + 1.5rem);
+  left: 5%; right: 5%;
+  z-index: 1000;
+  height: calc(var(--navbar-height) - 10px);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+/* On hero (dark video bg) — glass effect */
+.navbar--hero {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.navbar--hero .navbar__logo,
+.navbar--hero .navbar__link,
+.navbar--hero .navbar__icon,
+.navbar--hero .navbar__hamburger {
+  color: #fff;
+}
+
+.navbar--hero .navbar__logo span { color: rgba(255,255,255,0.7); }
+
+.navbar--hero .navbar__link::after { background: #fff; }
+
+.navbar--hero .navbar__shop-btn {
+  border-color: rgba(255,255,255,0.8);
+  color: #fff;
+}
+.navbar--hero .navbar__shop-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Scrolled — white background, dark text */
+.navbar--scrolled {
+  top: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar__logo {
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.navbar__logo span { color: var(--color-accent); }
+
+/* Links */
+.navbar__links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.navbar__link {
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color var(--transition-fast);
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.navbar__link:hover { color: var(--color-accent); }
+.navbar__link:hover::after { width: 100%; }
+
+/* Actions */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.navbar__icon {
+  font-size: var(--fs-md);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-dark);
+  transition: transform var(--transition-fast);
+}
+.navbar__icon:hover { transform: scale(1.15); }
+
+/* Shop all items button */
+.navbar__shop-btn {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.55rem 1.2rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-dark);
+  color: var(--color-dark);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+.navbar__shop-btn:hover {
+  background: var(--color-dark);
+  color: #fff;
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  font-size: var(--fs-xl);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-dark);
+}
+
+/* Mobile menu */
+.navbar__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  padding: var(--space-md) var(--container-padding);
+  border-top: 1px solid var(--color-gray-light);
+  box-shadow: var(--shadow-md);
+  gap: var(--space-sm);
+}
+
+.navbar__mobile-link {
+  font-family: var(--font-accent);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--color-dark);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-fast);
+}
+.navbar__mobile-link:hover { color: var(--color-accent); }
+
+/* Responsive */
+@media (max-width: 810px) {
+  .hide-phone { display: none; }
+}
+@media (min-width: 811px) {
+  .hide-tablet-up { display: none; }
+}

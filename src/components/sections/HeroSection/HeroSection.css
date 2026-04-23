@@ -1,0 +1,264 @@
+/* ==============================================
+   VRINDAVAN SWEETS SHOP — Hero Section Styles
+   ============================================== */
+
+/* ── Announcement Bar ── */
+.announce-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1100;
+  height: var(--announce-bar-height);
+  background: #111;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.announce-bar--hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.announce-bar__track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+
+.announce-bar__track span {
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  padding-right: 3rem;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Hero Section ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Video background */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+  will-change: transform;
+  /* Prevent any browser downscaling artifacts */
+  image-rendering: high-quality;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Dark gradient overlay */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.30) 0%,
+    rgba(0, 0, 0, 0.50) 55%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+/* Centre content block */
+.hero__body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 720px;
+  padding: 0 var(--container-padding);
+  padding-top: var(--total-top);
+  animation: heroFadeUp 1s ease both;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Badge ── */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  padding: 0.3rem 1rem 0.3rem 0.35rem;
+  margin-bottom: 1.4rem;
+}
+
+.hero__badge-chip {
+  background: #fff;
+  color: #111;
+  font-family: var(--font-accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.hero__badge-text {
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 400;
+}
+
+/* ── Headline ── */
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5.2vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #fff;
+  margin: 0 0 2.2rem 0;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ── CTA Buttons ── */
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: none;
+}
+
+/* White solid button */
+.hero-btn--solid {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+.hero-btn--solid:hover {
+  background: #f2f2f2;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Ghost outlined button */
+.hero-btn--ghost {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+.hero-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ── Thumbnail Strip ── */
+.hero__strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.2rem 2rem 1.6rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.hero__strip::-webkit-scrollbar { display: none; }
+
+.hero__thumb {
+  flex-shrink: 0;
+  width: 84px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  background: transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__thumb:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.hero__thumb--on {
+  border-color: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  transform: translateY(-4px);
+}
+
+.hero__thumb-swatch {
+  display: block;
+  width: 100%;
+  height: 96px;
+  border-radius: 4px 4px 0 0;
+}
+
+.hero__thumb-name {
+  display: block;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-family: var(--font-accent);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0.3rem 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero__title { font-size: 2rem; }
+  .hero-btn    { padding: 0.78rem 1.5rem; font-size: 0.8rem; }
+  .hero__thumb { width: 68px; }
+  .hero__thumb-swatch { height: 78px; }
+}

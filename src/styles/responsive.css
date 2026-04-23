@@ -1,0 +1,42 @@
+/* =============================================
+   YASH SHOP — Responsive Utilities
+   Breakpoints:
+     Desktop  : > 1199px
+     Tablet   : 810px — 1199px
+     Phone    : 0 — 809px
+   ============================================= */
+
+/* Tablet */
+@media (max-width: 1199px) {
+  :root {
+    --fs-5xl: 3.5rem;
+    --fs-4xl: 2.8rem;
+    --fs-3xl: 2rem;
+    --container-padding: 4%;
+    --space-3xl: 6rem;
+  }
+
+  .section-title { font-size: var(--fs-3xl); }
+}
+
+/* Phone */
+@media (max-width: 809px) {
+  :root {
+    --fs-5xl: 2.5rem;
+    --fs-4xl: 2rem;
+    --fs-3xl: 1.75rem;
+    --container-padding: 5%;
+    --navbar-height: 64px;
+    --space-3xl: 4rem;
+    --space-2xl: 3rem;
+  }
+
+  .section-title    { font-size: var(--fs-2xl); }
+  .section-subtitle { font-size: var(--fs-base); }
+
+  .hide-phone { display: none !important; }
+}
+
+@media (min-width: 810px) {
+  .hide-tablet-up { display: none !important; }
+}

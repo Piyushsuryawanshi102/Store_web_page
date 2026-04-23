@@ -1,0 +1,73 @@
+/* =============================================
+   Footer Styles
+   ============================================= */
+
+.footer {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding-top: var(--space-3xl);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.footer__logo span { color: var(--color-accent); }
+
+.footer__tagline {
+  color: var(--color-gray);
+  font-size: var(--fs-sm);
+}
+
+.footer__nav h4,
+.footer__contact h4 {
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-bottom: var(--space-md);
+}
+
+.footer__nav ul { display: flex; flex-direction: column; gap: var(--space-xs); }
+
+.footer__nav button {
+  background: none;
+  border: none;
+  color: var(--color-off-white);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: color var(--transition-fast);
+}
+.footer__nav button:hover { color: var(--color-accent); }
+
+.footer__contact p {
+  color: var(--color-off-white);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: var(--space-md) var(--container-padding);
+  text-align: center;
+  color: var(--color-gray);
+  font-size: var(--fs-xs);
+}
+
+@media (max-width: 809px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
