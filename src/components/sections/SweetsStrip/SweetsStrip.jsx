@@ -39,7 +39,29 @@ const SWEETS = [
   },
   { 
     id: 3, name: 'Soft Drinks', image: '/catogeries/soft_drink-removebg-preview.png', bg: 'linear-gradient(145deg,#c9b8aa,#fff3ea)', tag: 'Light',
-    products: generateProducts('Soft Drinks', 250)
+    products: [
+      { id: 301, name: 'Coca Cola', image: '/soft drink/coco cola.webp', price: '₹40', oldPrice: '₹45', badge: 'Popular', colors: ['#e41e2b', '#ffffff'] },
+      { id: 302, name: 'Pepsi', image: '/soft drink/pepsi.jpg', price: '₹40', oldPrice: '₹45', badge: 'Bestseller', colors: ['#005cb4', '#ffffff'] },
+      { id: 303, name: 'Sprite', image: '/soft drink/sprit.jpg', price: '₹40', oldPrice: '₹45', badge: '', colors: ['#008b45', '#ffffff'] },
+      { id: 304, name: 'Fanta', image: '/soft drink/fanta.jpg', price: '₹40', oldPrice: '₹45', badge: '', colors: ['#ff8200', '#ffffff'] },
+      { id: 305, name: 'Diet Coke', image: '/soft drink/deit coke.jpg', price: '₹45', oldPrice: '₹50', badge: 'Zero Sugar', colors: ['#bbbcbc', '#000000'] },
+      { id: 306, name: 'Coca Cola Can', image: '/soft drink/coco cola can.jpeg', price: '₹35', oldPrice: '₹40', badge: '', colors: ['#e41e2b', '#ffffff'] },
+      { id: 307, name: 'Pepsi 2L', image: '/soft drink/pepsi 2l.webp', price: '₹95', oldPrice: '₹105', badge: 'Party Pack', colors: ['#005cb4', '#ffffff'] },
+      { id: 308, name: 'Maaza 2L', image: '/soft drink/maza 2 liter.webp', price: '₹99', oldPrice: '₹110', badge: 'Value', colors: ['#ffb11b', '#41ad49'] },
+      { id: 309, name: 'Paper Boat Litchi', image: '/soft drink/paper boat lichi.webp', price: '₹35', oldPrice: '₹40', badge: 'Organic', colors: ['#f8bbd0', '#ffffff'] },
+      { id: 310, name: 'Appy Fizz', image: '/soft drink/appy 20.webp', price: '₹20', oldPrice: '₹25', badge: '', colors: ['#000000', '#ffffff'] },
+      { id: 311, name: 'Frooti', image: '/soft drink/frooti 10 rupee.webp', price: '₹10', oldPrice: '₹12', badge: '', colors: ['#ffeb3b', '#4caf50'] },
+      { id: 312, name: 'Sprite Can', image: '/soft drink/sprit can.jpg', price: '₹35', oldPrice: '₹40', badge: '', colors: ['#008b45', '#ffffff'] },
+      { id: 313, name: 'Paper Boat Mango', image: '/soft drink/paper boat mango.jpg', price: '₹35', oldPrice: '₹40', badge: '', colors: ['#ffc107', '#ffffff'] },
+      { id: 314, name: 'Paper Boat Pomegranate', image: '/soft drink/paper boat pomo granet.jpg', price: '₹35', oldPrice: '₹40', badge: '', colors: ['#d32f2f', '#ffffff'] },
+      { id: 315, name: 'Fanta 2L', image: '/soft drink/fanta 2 liter.webp', price: '₹95', oldPrice: '₹105', badge: '', colors: ['#ff8200', '#ffffff'] },
+      { id: 316, name: 'Maaza Small', image: '/soft drink/maza 10 rupee.webp', price: '₹10', oldPrice: '₹12', badge: '', colors: ['#ffb11b', '#41ad49'] },
+      { id: 317, name: 'Pepsi Small', image: '/soft drink/pepsi 20ruppe.jpg', price: '₹20', oldPrice: '₹25', badge: '', colors: ['#005cb4', '#ffffff'] },
+      { id: 318, name: 'Sprite Small', image: '/soft drink/sprite small.webp', price: '₹20', oldPrice: '₹25', badge: '', colors: ['#008b45', '#ffffff'] },
+      { id: 319, name: 'Paper Boat Guava', image: '/soft drink/paper boat guava.avif', price: '₹35', oldPrice: '₹40', badge: '', colors: ['#8bc34a', '#ffffff'] },
+      { id: 320, name: 'Fanta Can', image: '/soft drink/fanta can.jpeg', price: '₹35', oldPrice: '₹40', badge: '', colors: ['#ff8200', '#ffffff'] },
+      { id: 321, name: 'Appy Small', image: '/soft drink/appy 10.avif', price: '₹10', oldPrice: '₹12', badge: '', colors: ['#000000', '#ffffff'] },
+    ]
   },
   { 
     id: 4, name: 'Biscuit', image: '/catogeries/biscuit-removebg-preview.png', bg: 'linear-gradient(145deg,#c0607a,#f0aabe)', tag: 'Popular',
