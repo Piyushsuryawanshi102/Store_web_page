@@ -52,6 +52,16 @@
   margin-bottom: 4rem;
 }
 
+@media (max-width: 480px) {
+  .namkeen__cta {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .namkeen__btn-dark, .namkeen__btn-light {
+    width: 100%;
+  }
+}
+
 .namkeen__btn-dark {
   background: #111;
   color: #fff;

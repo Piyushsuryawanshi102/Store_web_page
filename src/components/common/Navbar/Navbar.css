@@ -67,6 +67,12 @@
   white-space: nowrap;
 }
 
+@media (max-width: 480px) {
+  .navbar__logo {
+    font-size: 0.75rem;
+  }
+}
+
 .navbar__logo span { color: var(--color-accent); }
 
 /* Links */
@@ -173,8 +179,19 @@
 
 /* Responsive */
 @media (max-width: 810px) {
-  .hide-phone { display: none; }
+  .hide-phone { display: none !important; }
+  
+  .navbar {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .hide-mobile { display: none !important; }
+}
+
 @media (min-width: 811px) {
-  .hide-tablet-up { display: none; }
+  .hide-tablet-up { display: none !important; }
 }

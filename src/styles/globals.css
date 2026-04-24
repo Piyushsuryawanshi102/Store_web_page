@@ -91,11 +91,23 @@ input, textarea, select {
   margin-bottom: var(--space-md);
 }
 
+@media (max-width: 480px) {
+  .section-title {
+    font-size: var(--fs-2xl);
+  }
+}
+
 .section-subtitle {
   font-size: var(--fs-md);
   color: var(--color-text-muted);
   max-width: 560px;
   line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .section-subtitle {
+    font-size: var(--fs-sm);
+  }
 }
 
 /* Button base */

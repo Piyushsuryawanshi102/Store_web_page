@@ -63,14 +63,31 @@
   --transition-slow: 0.5s ease;
   --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  /* Layout */
-  --max-width: 1440px;
-  --container-padding: 5%;
-  --announce-bar-height: 36px;
-  --navbar-height: 80px;
-  --total-top: calc(var(--announce-bar-height) + var(--navbar-height));
+  /* Breakpoints */
+  --bp-tablet: 810px;
+  --bp-phone: 480px;
+}
 
-  /* Breakpoints (reference only — use in media queries) */
-  /* --bp-tablet: 810px */
-  /* --bp-phone: 480px */
+@media (max-width: 810px) {
+  :root {
+    --fs-3xl: 2rem;
+    --fs-4xl: 2.5rem;
+    --fs-5xl: 3.5rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --navbar-height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.75rem;
+    --fs-4xl: 2rem;
+    --container-padding: 1rem;
+    --space-xl: 2rem;
+    --space-2xl: 2.5rem;
+    --space-3xl: 3rem;
+  }
 }

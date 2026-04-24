@@ -147,15 +147,22 @@
 }
 
 @media (max-width: 600px) {
-  .location__video-wrapper--1 {
-    width: 65%;
-    height: 75%;
-    left: 0;
+  .location__media {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
-  .location__video-wrapper--2 {
-    width: 65%;
-    right: 0;
-    bottom: 5%;
+  
+  .location__video-wrapper {
+    position: relative;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
   }
 }
 

@@ -66,8 +66,21 @@
 }
 
 @media (max-width: 809px) {
+  .footer {
+    padding-top: var(--space-2xl);
+    text-align: center;
+  }
+
   .footer__grid {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
+  }
+
+  .footer__nav ul {
+    align-items: center;
+  }
+
+  .footer__nav button {
+    text-align: center;
   }
 }

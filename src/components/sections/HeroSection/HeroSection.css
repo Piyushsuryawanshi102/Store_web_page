@@ -155,6 +155,19 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 480px) {
+  .hero__cta {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    padding: 0.9rem 1rem;
+  }
+}
+
 .hero-btn {
   font-family: var(--font-accent);
   font-size: var(--fs-sm);

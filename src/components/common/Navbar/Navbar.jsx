@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Actions */}
         <div className="navbar__actions">
           <button className="navbar__icon" aria-label="Search"></button>
-          <button className="navbar__shop-btn" onClick={() => scrollTo('shop')}>
+          <button className="navbar__shop-btn hide-phone" onClick={() => scrollTo('shop')}>
             Shop all items
           </button>
           {/* Hamburger */}
@@ -72,6 +72,13 @@ const Navbar = () => {
               {link.label}
             </button>
           ))}
+          <button 
+            className="navbar__shop-btn" 
+            style={{ marginTop: '1rem', width: '100%' }}
+            onClick={() => { scrollTo('shop'); setMenuOpen(false); }}
+          >
+            Shop all items
+          </button>
         </div>
       )}
     </nav>
