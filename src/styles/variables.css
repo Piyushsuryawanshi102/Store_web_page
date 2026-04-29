@@ -66,6 +66,11 @@
   /* Breakpoints */
   --bp-tablet: 810px;
   --bp-phone: 480px;
+
+  /* Layout */
+  --announce-bar-height: 40px;
+  --navbar-height: 80px;
+  --total-top: calc(var(--announce-bar-height) + var(--navbar-height) + 2rem);
 }
 
 @media (max-width: 810px) {
